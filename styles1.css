@@ -109,14 +109,14 @@ button {
 
 #section1 { 
     align-items: left;
-    height: 65vh;
+    height: 55vh;
 }
 #section2 {     
     align-items: right;
-    height: 60vh;
+    height: 55vh;
 }
 #section3 { 
-    height: 40vh;
+    height: 35vh;
  }
 #section4 {     
     height: 50vh; }
