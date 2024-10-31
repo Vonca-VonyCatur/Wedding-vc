@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangjit & Wedding</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+             <div id="container1" class="container">
+                 <div class="page1"></div>
+                    <div class="photo-frame" id="photoFrame">
+                            <div class="layer" id="layer1"></div>
+                            <div class="layer" id="layer2"></div>
+                            <div class="layer" id="layer3"></div>
+                    </div>
+                 <img src="vc.png" id="cavo">
+                <script src="script.js"></script>
+                <button onclick="location.href='#section1'">Calon Pengantin</button>
+        </div>
+                <audio id="background-music" src="thesangjit.mp3" autoplay loop></audio>
+</header>
+
+<div class="container" id="section1">
+    <img src="gendut.png" id="gendut1" width="400px">
+</div>
+<div class="container" id="section2">
+    <img src="bocil.png" id="gendut1" width="400px">
+</div>
+<div class="container" id="section3">
+    <div class="gallery">
+        <img src="vc1.jpeg" alt="Foto 1" class="thumbnail" onclick="openModal(this)">
+        <img src="vc2.jpeg" alt="Foto 2" class="thumbnail" onclick="openModal(this)">
+        <img src="vc3.jpeg" alt="Foto 3" class="thumbnail" onclick="openModal(this)">
+        <img src="vc4.jpeg" alt="Foto 4" class="thumbnail" onclick="openModal(this)">
+    </div>
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+</div>
+<div class="container" id="section4">
+    <img src="Prewed.png" id="prew" width="200px">
+    <div class="video-container">
+        <iframe 
+            width="370" 
+            height="209" 
+            src="https://youtu.be/XoYlcSQEXMk?si=5S1XYDG3pgDvX5Pw" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+<div class="container" id="section5">
+    <h2>Bagian 5</h2>
+    <p>Konten untuk bagian 5...</p>
+</div>
+
+<script>
+    const audio = document.getElementById('background-music');
+    const toggleButton = document.getElementById('toggle-music');
+
+    toggleButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            toggleButton.textContent = 'Pause Music';
+        } else {
+            audio.pause();
+            toggleButton.textContent = 'Play Music';
+        }
+    });
+</script>
+</body>
+</html>
