@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    background: url('img/bgn1.gif') no-repeat center center fixed;
+    background-size: 400px;
+    background-position: top;
+    background-attachment: scroll;
+}
+
+.container{
+    position: relative;
+    padding-top: 5px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #5d0000;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #6c5500;
+}
+
+
+.photo-frame {
+    padding-top: 10px;
+    width: 350px;
+    height: 400px;
+    position: center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s;
+}
+
+#layer1 {
+    background-image: url('img/Amplop2.png');
+    transform: translateZ(20px);
+}
+
+#layer2 {
+    background-image: url('img/surat.png');
+    transform: translateZ(100px);
+}
+
+#layer3 {
+    background-image: url('img/bulu2.png');
+    transform: translateZ(150px);
+}
+
+#cavo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-top: 5px;
+}
+
+#cavo2 {
+    width: 130px;
+    height: auto;
+    margin-top: 20px;
+}
+
+form button {
+    background-color: #fcd26f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #6c5500;
+}
+
+button {
+    background: rgba(146, 0, 0, 0.913);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#section1 { 
+    background: url('img/bgn2.gif') no-repeat center center fixed;
+    background-attachment: scroll;
+    background-size: 400px;
+    align-items: left;
+    height: 53vh;
+}
+#section2 {    
+    background: url('img/bgn3.gif') no-repeat center center fixed;
+    background-attachment: scroll;
+    background-size: 400px;
+    align-items: right;
+    height: 50vh;
+}
+#section3 {
+    background: url('img/bgn5.gif') no-repeat center center fixed;
+    background-attachment: scroll;
+    background-size: 400px;
+    height: 38vh;
+ }
+#section4 {
+    background: url('img/bgn7.gif') no-repeat center center fixed;
+    background-attachment: scroll;
+    background-size: 400px;
+    height: 50vh; 
+}
+#section5 {
+    background: url('img/bgn5.gif') no-repeat center center fixed;
+    background-attachment: scroll;
+    background-size: 400px;
+    height: 75vh;
+}
+#section6 {
+    background: url('img/bgn6.gif') no-repeat center center fixed;
+    background-attachment: scroll;
+    background-size: 400px;
+    background-position: bottom;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Membuat gambar mengisi beberapa baris */
+    justify-content: center; /* Mengatur gambar ke tengah */
+    padding: 20px;
+}
+
+.thumbnail {
+    width: 45%; /* Mengatur lebar gambar agar pas dalam 2 kolom */
+    margin: 5px; /* Margin antar gambar */
+    cursor: pointer; /* Pointer saat hover */
+    transition: transform 0.2s; /* Efek transisi */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed;
+    z-index: 1; /* Di atas elemen lainnya */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang transparan */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%; /* Maksimal lebar gambar modal */
+    max-height: 80%; /* Maksimal tinggi gambar modal */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.video-container {
+    margin: 20px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 340px;  /* Lebar gambar container */
+    height: 300px; /* Tinggi gambar container */
+}
+
+.stacked-img {
+    position: absolute;
+    width: 100%;  /* Gambar memenuhi lebar container */
+    height: 100%; /* Gambar memenuhi tinggi container */
+    object-fit: cover; /* Menyesuaikan ukuran gambar agar tidak terdistorsi */
+    transition: transform 0.3s ease; /* Transisi saat gambar diubah */
+}
+
+.img1 {
+    z-index: 2;
+}
+
+.img2 {
+    top: 20px;
+    z-index: 1;
+}
+
+
+input{
+    margin-top: 20px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #530000;
+    background-color: rgba(146, 0, 0, 0.913);
+    border-radius: 5px;
+    font-size: 18px;
+    color: #ffffff;
+    box-shadow: 0 0 10px -4px #6b0e0e;
+  }
+
+  i:active{
+    color: #420000;
+  }
+  i{
+    top: 15px;
+    right: -46px;
+    color:#fff;
+    cursor: pointer;
+    font-size: 40px;
+  }
+  p{
+    color:#fff;
+    font-size: 12px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 1px;
+  }

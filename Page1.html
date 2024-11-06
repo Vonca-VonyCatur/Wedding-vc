@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangjit & Wedding</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles1.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+             <div id="container1" class="container">
+                 <div class="page1"></div>
+                    <div class="photo-frame" id="photoFrame">
+                            <div class="layer" id="layer1"></div>
+                            <div class="layer" id="layer2"></div>
+                            <div class="layer" id="layer3"></div>
+                    </div>
+                 <img src="img/vc.png" id="cavo">
+                <button onclick="location.href='#section1'">Calon Pengantin</button>
+        </div>
+                <audio id="background-music" src="thesangjit.mp3" autoplay loop></audio>
+</header>
+
+<div class="container" id="section1">
+    <img src="img/gendut.png" id="gendut1" width="350px">
+</div>
+<div class="container" id="section2">
+    <img src="img/bocil.png" id="gendut1" width="350px">
+</div>
+<div class="container" id="section3">
+    <div class="gallery">
+        <img src="img/vc1.jpeg" alt="Foto 1" class="thumbnail" onclick="openModal(this)">
+        <img src="img/vc2.jpeg" alt="Foto 2" class="thumbnail" onclick="openModal(this)">
+        <img src="img/vc3.jpeg" alt="Foto 3" class="thumbnail" onclick="openModal(this)">
+        <img src="img/vc4.jpeg" alt="Foto 4" class="thumbnail" onclick="openModal(this)">
+    </div>
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+</div>
+<div class="container" id="section4">
+    <img src="img/Prewed.png" id="prew" width="200px">
+    <div class="video-container">
+<iframe src="https://drive.google.com/file/d/1r6SsoXJT9FB967NwT5hPUwfy5HxBEalt/preview" width="330" height="187" allow="autoplay">
+</iframe>
+    </div>
+</div>
+<div class="container" id="section5">
+    <img src="img/b5.png" id="bgn1" width="350px">   
+</div>
+<div class="container" id="section6">
+    <div class="image-container">
+        <img src="img/Angpao5.png" alt="Gambar 1" class="stacked-img img1">
+        <img src="img/Koin5.png" alt="Gambar 2" class="stacked-img img2">
+    </div>
+    <div class="main">
+        <input type="text" id="text" value="8160979161" readonly>
+        <i class="material-icons" onclick="copy()" id="copy">content_copy</i>
+      </div>
+      <p id="show"></p>
+      <button onclick="location.href='ucpn.html'">Kirim Ucapan</button>
+                <img src="img/vc5.png" id="cavo2">
+        </div>
+</div>
+
+
+<script>
+    const audio = document.getElementById('background-music');
+    const toggleButton = document.getElementById('toggle-music');
+
+    toggleButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            toggleButton.textContent = 'Pause Music';
+        } else {
+            audio.pause();
+            toggleButton.textContent = 'Play Music';
+        }
+    });
+</script>
+</body>
+</html>
